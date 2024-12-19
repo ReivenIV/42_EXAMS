@@ -6,7 +6,7 @@
 /*   By: rita <rita@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 16:02:32 by rita              #+#    #+#             */
-/*   Updated: 2024/12/19 16:44:29 by rita             ###   ########.fr       */
+/*   Updated: 2024/12/19 16:51:31 by rita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,14 @@ int main(void)
     
     while (1 <= 100)
     {
+        // if n multiple 3 & 5, print "fizzbuzz"
+        // varient  "" if (i % 15 == 0) ""
         if (i % 3 == 0 && i % 5 == 0)
             write(1, "fizzbuzz", 8);
+        // if n is multiple of 3, print 'fizz'.
         else if (i % 3 == 0)
             write(1, "fizz", 4);
+        // If n is multiple of 5, it prints 'buzz'.
         else if (i % 5 == 0)
             write (1, "buzz", 4);
         else 
