@@ -1,5 +1,9 @@
 #include <unistd.h>
 
+/*
+in these version we don t have a variable called prited_outputs
+we have multiplier-- 
+*/
 int main(int ac, char **av)
 {
     int i;

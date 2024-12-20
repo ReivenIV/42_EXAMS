@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:50:51 by rita              #+#    #+#             */
-/*   Updated: 2024/12/20 12:41:24 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/12/20 12:43:42 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int main(int argc, char **argv)
 		while (argv[1][i] != '\0')
 		{
 			multiplier = 1;
+			// we add +1. ex: "D" (D(68) - A(65) = 3) but D its 4 its the same to all the other letter
 			if (argv[1][i] >= 'a' && argv[1][i] <='z')
 				multiplier = argv[1][i] - 'a' + 1;
 			else if (argv[1][i] >= 'A' && argv[1][i] <='Z')
