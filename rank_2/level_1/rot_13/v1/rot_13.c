@@ -12,8 +12,12 @@
 
 #include <unistd.h>
 
-/* 
+//*	REMINDER these exercice is almost the same as rotone
+
+
+/*
 explanataion : 
+		In these exercice we move the chars of 13 case. 
 		argv[1][i] = (argv[1][i] - 'a' + 13) % 26 + 'a';
 
 >> ""(argv[1][i] - 'a' + 13)"" :
