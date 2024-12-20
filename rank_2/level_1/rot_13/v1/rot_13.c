@@ -11,6 +11,23 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+/* 
+explanataion : 
+		argv[1][i] = (argv[1][i] - 'a' + 13) % 26 + 'a';
+
+>> ""(argv[1][i] - 'a' + 13)"" :
+	- we found the position of the asked rot. 
+ex[D] = ('D' - 'A' + 13) = 16 = (68 - 65 + 13)
+ex[Z] = ('Z' - 'A' + 13) = 35 = (68 - 65 + 13)
+
+>> ""(n) % 26 + 'A'"" :
+	- "modulo 26" : is because ascii AZ = 26 so if a number depase 26 we will found the rest and their position in the begining of the table
+	- "n + 'A'" : the magical letter to transform the ints we are manipulating into chars. 
+ex[D] = 16 % 26 = 16 + 'A' = 'Q'
+ex[Z] = 35 % 26 = 12 + 'A' = 'M'
+*/
+
 int main(int argc, char **argv)
 {
 	int i;
