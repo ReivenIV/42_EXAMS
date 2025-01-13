@@ -1,30 +1,46 @@
+// Passed Moulinette 2019.09.01
+// source : unkown
 #include <unistd.h>
 
-int main(int argc, char const *argv[])
+int		skip_whitespace(char *str, int i)
 {
-	int i;
-	int flg;
+	while (str[i] == ' ' || str[i] == '\t')
+		++i;
+	return (i);
+}
 
-	if (argc == 2)
+int		ft_wordlen(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0' && str[i] != ' ' && str[i] != '\t')
+		++i;
+	return (i);
+}
+
+void	epur_str(char *str)
+{
+	int i = 0;
+	int first_word = 1;
+	int word_len;
+
+	i = skip_whitespace(str, i);
+	while (str[i] != '\0')
 	{
-		flg = 0;
-		i = 0;
-		while (argv[1][i] == ' ' || argv[1][i] == '\t')
-			i += 1;
-		while (argv[1][i])
-		{
-			if (argv[1][i] == ' ' || argv[1][i] == '\t')
-				flg = 1;
-			if (!(argv[1][i] == ' ' || argv[1][i] == '\t'))
-			{
-				if (flg)
-					write(1, " ", 1);
-				flg = 0;
-				write(1, &argv[1][i], 1);
-			}
-			i += 1;
-		}
+		if (first_word == 0)
+			write(1, " ", 1);
+		word_len = ft_wordlen(str + i);
+		write(1, str + i, word_len);
+		i = i + word_len;
+		first_word = 0;
+		i = skip_whitespace(str, i);
 	}
+}
+
+int		main(int argc, char **argv)
+{
+	if (argc == 2)
+		epur_str(argv[1]);
 	write(1, "\n", 1);
 	return (0);
 }

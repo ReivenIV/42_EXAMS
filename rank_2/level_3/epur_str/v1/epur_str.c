@@ -35,6 +35,7 @@ int	main(int ac, char **av)
 				flag = 1;
 			if(!((av[1][i] == ' ' || av[1][i] == '\t')))
 			{
+				// REMINDER: the flag is usefull when it jump all the spaces its a reminder to make only one space and then print the hole word. 
 				if (flag == 1)
 				{
 					write(1, " ", 1);
