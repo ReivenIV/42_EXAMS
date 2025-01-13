@@ -16,7 +16,11 @@ int	    is_power_of_2(unsigned int n);
 ```
 
 ---------------------------------
-## Paralel information (non subjet part)
+---------------------------------
+---------------------------------
+---------------------------------
+
+# Personal notes: (non subjet part)
 
 The is_power_of_2 function can be useful in various scenarios, particularly in computer science and programming contexts:
 
