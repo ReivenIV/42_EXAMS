@@ -57,28 +57,28 @@ void	ft_putnbr(int n)
 	write(1, &c, 1);
 }
 
-#include <stdio.h>
-int	main(int argc, char **argv)
-{
-	int v1;
-	int v3;
-	int vq;
-	if (argc == 4)
-	{
-		if (argv[2][0] == '+')
-			ft_putnbr(ft_atoi(argv[1]) + ft_atoi(argv[3]));
-		if (argv[2][0] == '-')
-		{
-			v1 = ft_atoi(argv[1]);
-			v3 = ft_atoi(argv[3]);
-			vq = v1 - v3;
-			ft_putnbr(vq);
-		}
-		if (argv[2][0] == '*')
-			ft_putnbr(ft_atoi(argv[1]) * ft_atoi(argv[3]));
-		if (argv[2][0] == '/')
-			ft_putnbr(ft_atoi(argv[1]) / ft_atoi(argv[3]));
-	}
-	write(1, "\n", 1);
-	return (0);
-}
+// #include <stdio.h>
+// int	main(int argc, char **argv)
+// {
+// 	int v1;
+// 	int v3;
+// 	int vq;
+// 	if (argc == 4)
+// 	{
+// 		if (argv[2][0] == '+')
+// 			ft_putnbr(ft_atoi(argv[1]) + ft_atoi(argv[3]));
+// 		if (argv[2][0] == '-')
+// 		{
+// 			v1 = ft_atoi(argv[1]);
+// 			v3 = ft_atoi(argv[3]);
+// 			vq = v1 - v3;
+// 			ft_putnbr(vq);
+// 		}
+// 		if (argv[2][0] == '*')
+// 			ft_putnbr(ft_atoi(argv[1]) * ft_atoi(argv[3]));
+// 		if (argv[2][0] == '/')
+// 			ft_putnbr(ft_atoi(argv[1]) / ft_atoi(argv[3]));
+// 	}
+// 	write(1, "\n", 1);
+// 	return (0);
+// }

@@ -2,11 +2,15 @@
 
 #include <unistd.h>
 
-int	ft_putchar(char c);
 
+int	ft_putchar(char c)
+{
+	return write(1, &c, 1);
+}
 int	main(int ac, char **av)
 {
-	int	i = 0, j;
+	int	i = 0;
+	int j;
 	// create an array of int that will act as a lookup table
 	// 256 is because of the ascii table, each one will
 	// correspond to a single character
@@ -43,7 +47,3 @@ int	main(int ac, char **av)
 	ft_putchar('\n');
 }
 
-int	ft_putchar(char c)
-{
-	return write(1, &c, 1);
-}

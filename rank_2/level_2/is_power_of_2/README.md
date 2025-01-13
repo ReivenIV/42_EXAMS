@@ -15,8 +15,8 @@ Your function must be declared as follows:
 int	    is_power_of_2(unsigned int n);
 ```
 
-
-## Paralel information 
+---------------------------------
+## Paralel information (non subjet part)
 
 The is_power_of_2 function can be useful in various scenarios, particularly in computer science and programming contexts:
 
@@ -25,7 +25,7 @@ The is_power_of_2 function can be useful in various scenarios, particularly in c
 1. Memory Allocation:
 - Ensuring that memory sizes are powers of 2 can optimize memory alignment and access speeds.
 
-2. Bit Manipulation:
+2. Bit Manipulation: (check v4)
 - Powers of 2 have exactly one bit set in their binary representation, which is useful in bitwise operations and optimizations.
 
 3. Algorithm Optimization:
