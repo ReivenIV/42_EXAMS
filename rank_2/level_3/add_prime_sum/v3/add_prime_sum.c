@@ -57,8 +57,8 @@ void	add_prime_sum(int n)
 	count = 0;
 	if (n == 1)
 		count = 1;
-	i = 1;
-	while (++i <= n)
+	i = 1; // is starting at 1 because is not blocking in is_prime ""if(n < 1)return(0);"" if it starts at 0 it going to have +1 in every output.  
+	while (++i <= n) 
 		if (is_prime(i))
 			count += i;
 	ft_putposnbr(count);
