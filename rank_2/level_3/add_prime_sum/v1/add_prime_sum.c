@@ -25,14 +25,6 @@ int	ft_atoi(char *str)
 	return (res);
 }
 
-// // #include <stdio.h>
-// // int main(void)
-// // {
-// // 	char *str = "7";
-// // 	printf("%i", ft_atoi(str));	
-// // 	return(0);
-// // }
-
 void	ft_putnbr(int n)
 {
 	if (n > 9)
@@ -40,12 +32,6 @@ void	ft_putnbr(int n)
 	char digit = n % 10 + '0';
 	write(1, &digit, 1);
 }
-
-// // int main(void)
-// // {
-// // 	ft_putnbr(5);
-// // 	return (0);
-// // }
 
 
 // will check if the number is prime or not (divisible by other numbers or not)
@@ -66,13 +52,6 @@ int	is_prime(int n)
 	}
 	return (1);
 }
-
-// // #include <stdio.h>
-// // int main(void)
-// // {
-// // 	printf("%i", is_prime(7));	// should output 1
-// // 	return(0);
-// // }
 
 int main(int ac, char **av)
 {
