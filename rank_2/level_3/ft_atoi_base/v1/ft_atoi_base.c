@@ -73,7 +73,7 @@ int	ft_atoi_base(const char *str, int str_base)
 
 }
 
-
+#include <stdio.h>
 int main()
 {
     const char *test1 = "1A";
