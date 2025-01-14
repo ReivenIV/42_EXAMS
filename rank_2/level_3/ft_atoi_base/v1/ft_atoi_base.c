@@ -1,4 +1,4 @@
-// personal
+// personal. Reference v2(unknown) and v5(GPT-4o)
 
 /* ************************************************************************** */
 /*                                                                            */
@@ -57,15 +57,17 @@ int	ft_atoi_base(const char *str, int str_base)
 	while (str[i] != '\0')
 	{
 		if (ft_isdigit(str[i]))
-			current_digit = str[i] - '0'; 
+			current_digit = str[i] - '0'; // form to swap a (char)number to (int)number
 		else if (ft_isalpha(str[i]))
-			current_digit = ft_tolower(str[i]) - 'a' + 10;
+			current_digit = ft_tolower(str[i]) - 'a' + 10; // form to swap  (char)char to (int)number
 		else
 			break;
 
-		if (current_digit >= str_base)
+		// if the current digit is >= to str_base we break the loop
+		if (current_digit >= str_base) 
 			break;
 		
+		// formula to add every digit into res
 		res = res * str_base + current_digit;
 		i++;
 	}
