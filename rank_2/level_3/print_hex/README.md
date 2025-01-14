@@ -22,3 +22,20 @@ $> ./print_hex "5156454" | cat -e
 $> ./print_hex | cat -e
 $
 ```
+
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+
+# Personal notes: (non subjet part)
+
+## TODO: 
+```
+	You will need : 
+		ft_atoi
+			- form: res = res * 10 + (str[i] - '0');
+		print_hex:
+			- refs base 16 : char *digits = "0123456789abcdef";
+			- recursive : if( n > 16) {print_hex(n / 16);}
+```

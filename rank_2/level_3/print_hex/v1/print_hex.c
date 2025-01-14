@@ -6,11 +6,20 @@
 /*   By: rita <rita@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:50:47 by rita              #+#    #+#             */
-/*   Updated: 2025/01/14 18:06:01 by rita             ###   ########.fr       */
+/*   Updated: 2025/01/14 18:21:36 by rita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+/*
+	You will need : 
+		ft_atoi
+			- form: res = res * 10 + (str[i] - '0');
+		print_hex:
+			- refs base 16 : char *digits = "0123456789abcdef";
+			- recursive : if( n > 16) {print_hex(n / 16);}
+*/
 
 int	ft_atoi(char *str)
 {
