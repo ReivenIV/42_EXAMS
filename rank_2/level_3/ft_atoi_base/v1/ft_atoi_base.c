@@ -13,7 +13,6 @@
 /* ************************************************************************** */
 
 
-#include <stdio.h>
 int	ft_isdigit(char c){
 	if (c >= '0' && c <= '9')
 		return (1);
@@ -75,32 +74,32 @@ int	ft_atoi_base(const char *str, int str_base)
 
 }
 
-#include <stdio.h>
-int main()
-{
-    const char *test1 = "1A";
-    const char *test2 = "-1A";
-    const char *test3 = "1010";
-    const char *test4 = "7F";
-    const char *test5 = "F4240";
+// // #include <stdio.h>
+// // int main()
+// // {
+// //     const char *test1 = "1A";
+// //     const char *test2 = "-1A";
+// //     const char *test3 = "1010";
+// //     const char *test4 = "7F";
+// //     const char *test5 = "F4240";
 
-    printf("Test 1: %s in base 16 is::  %d\n", test1, ft_atoi_base(test1, 16));
-    printf("Test 2: %s in base 16 is:: %d\n", test2, ft_atoi_base(test2, 16));
-    printf("Test 3: %s in base 2 is:: %d\n", test3, ft_atoi_base(test3, 2));
-    printf("Test 4: %s in base 16 is:: %d\n", test4, ft_atoi_base(test4, 16));
-    printf("Test 5: %s in base 16 is:: %d\n", test5, ft_atoi_base(test5, 16));
+// //     printf("Test 1: %s in base 16 is::  %d\n", test1, ft_atoi_base(test1, 16));
+// //     printf("Test 2: %s in base 16 is:: %d\n", test2, ft_atoi_base(test2, 16));
+// //     printf("Test 3: %s in base 2 is:: %d\n", test3, ft_atoi_base(test3, 2));
+// //     printf("Test 4: %s in base 16 is:: %d\n", test4, ft_atoi_base(test4, 16));
+// //     printf("Test 5: %s in base 16 is:: %d\n", test5, ft_atoi_base(test5, 16));
 
-    printf("\n");
+// //     printf("\n");
 
-    // //* edge cases
-    const char *edge_case1 = "Z"; 
-    const char *edge_case2 = "+"; 
-    const char *edge_case3 = "+1010"; 
-    const char *edge_case4 = "----1010"; 
-    printf("edge_case1:: %s in base 16 is:: %d\n", edge_case1, ft_atoi_base(edge_case1, 16));
-    printf("edge_case2:: %s in base 16 is:: %d\n", edge_case2, ft_atoi_base(edge_case2, 16));
-    printf("edge_case3:: %s in base 16 is:: %d\n", edge_case3, ft_atoi_base(edge_case3, 16));
-    printf("edge_case4:: %s in base 16 is:: %d\n", edge_case4, ft_atoi_base(edge_case4, 16));
+// //     // //* edge cases
+// //     const char *edge_case1 = "Z"; 
+// //     const char *edge_case2 = "+"; 
+// //     const char *edge_case3 = "+1010"; 
+// //     const char *edge_case4 = "----1010"; 
+// //     printf("edge_case1:: %s in base 16 is:: %d\n", edge_case1, ft_atoi_base(edge_case1, 16));
+// //     printf("edge_case2:: %s in base 16 is:: %d\n", edge_case2, ft_atoi_base(edge_case2, 16));
+// //     printf("edge_case3:: %s in base 16 is:: %d\n", edge_case3, ft_atoi_base(edge_case3, 16));
+// //     printf("edge_case4:: %s in base 16 is:: %d\n", edge_case4, ft_atoi_base(edge_case4, 16));
 
-    return 0;
-}
+// //     return 0;
+// // }
