@@ -27,3 +27,19 @@ $> ./pgcd 17 3 | cat -e
 $> ./pgcd | cat -e
 $
 ```
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+
+# Personal notes: (non subjet part)
+## "highest common denominator"
+Largest positive integer that divides each of the given numbers without leaving a remainder.
+- REMINDER: you will need to use '%' and not '/' to solve these problem. 
+
+For example, to find the HCF of 18 and 24:
+```
+The factors of 18 are 1,2,3,6,9,18
+The factors of 24 are 1,2,3,4,6,8,12,24
+The common factors are 1,2,3,6, and the highest of these is 6.
+```
