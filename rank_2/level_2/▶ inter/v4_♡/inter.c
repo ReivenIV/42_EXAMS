@@ -3,14 +3,14 @@
 #include <unistd.h>
 
 // should we print the char ?
-int should_print (char *str, char c, int pos)
+int should_print (char *list, char lego_block, int pos)
 {
     int i;
 
     i = 0;
     while (i < pos)
     {
-        if(str[i] == c)
+        if(list[i] == lego_block)
         // FALSE :: we should not print.
             return (0);
         i++;
@@ -19,25 +19,25 @@ int should_print (char *str, char c, int pos)
     return (1);
 }
 
-
-void ft_inter (char *str, char *find)
+// check the README to understand why list/bucket. 
+void ft_inter (char *list, char *bucket)
 {
     int i;
     int j;
     int is_found;
 
     i = 0;
-    while (str[i] != '\0')
+    while (list[i] != '\0')
     {
         j = 0;
-        is_found = 0; // <- in every loop we restart the flat = 0;
-        while (find[j] != '\0')
+        is_found = 0; // <- in every loop we restart the flag = 0;
+        while (bucket[j] != '\0')
         {
-            if (str[i] == find[j] && is_found == 0)
+            if (list[i] == bucket[j] && is_found == 0)
             {
-                if(should_print(str, str[i], i) == 1)
+                if(should_print(list, list[i], i) == 1)
                 {
-                    write(1, &str[i], 1);
+                    write(1, &list[i], 1);
                     is_found = 1; // if all satements are trusty we rise the flag = 1; 
                 }
             }
@@ -58,6 +58,6 @@ int main(int ac, char **av)
 
 /*
     these version is using a flag (is_found) to manage the printing and not printing of the second loop
-    in a performance perspective is not efficient because it will stop looping til find[j] is finish
+    in a performance perspective is not efficient because it will stop looping til bucket[j] is finish
     and because we don t know if break is allowed for the exam here is a "lega" understandable version.
 */ 

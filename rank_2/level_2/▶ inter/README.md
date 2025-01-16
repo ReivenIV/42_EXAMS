@@ -38,12 +38,17 @@ $
 
 # Explanation explanation with legos: 
 
-## Two Buckets of LEGO Blocks:
+## One list and one bucket of LEGO Blocks:
 
-Imagine you have two buckets of LEGO blocks. Each bucket represents a string.
-- Bucket 1: The first string.
-- Bucket 2: The second string.
+### Imagine that you have a list(ac2) and a bucket(ac3) of legos.
+- ac[2] list 1: The first string. It's the list of legos that could be present in the bucket
+- ac[3] Bucket 2: The second string. Is the buckets where are the actual legos and you need to check if what are inside. 
 
-## Find Common Blocks:
-- You need to find the LEGO blocks that are present in both buckets.
-- Only consider the blocks that appear in both buckets.
+## Find :
+- Imagine that you have a list(ac2) and a bucket of legos 
+- You need to find the lego blocks that are present in the list. 
+- Only take/print the blocks that appear in the list.
+	- if you have 10 blue in the bucket : take/print 1
+	- if you have 20 red in the list : take/1
+	- if there are 15 green in the bucket but non in the list : you don't take/print the green ones. 
+	- if in the list is asking for orange ones and they are none in the bucket : you don't take/print the orange ones.

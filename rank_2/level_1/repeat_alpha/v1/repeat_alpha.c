@@ -25,8 +25,8 @@ int main(int argc, char **argv)
 		while (argv[1][i] != '\0')
 		{
 			multiplier = 1;
-			// we add +1. ex: "D" (D(68) - A(65) = 3) but D its 4 its the same to all the other letter
 			if (argv[1][i] >= 'a' && argv[1][i] <='z')
+				// we add +1. ex: "D" (D(68) - A(65) = 3) but D its 4 its the same to all the other letter
 				multiplier = argv[1][i] - 'a' + 1;
 			else if (argv[1][i] >= 'A' && argv[1][i] <='Z')
 				multiplier = argv[1][i] - 'A' + 1;
