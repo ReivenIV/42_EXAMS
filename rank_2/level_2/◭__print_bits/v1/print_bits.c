@@ -11,7 +11,7 @@ void print_bits(unsigned char octet)
 	while (i > 0)
 	{
 		// way to get eacht bit from the byte(8bits)
-		bit = octet >> i & 1;
+		bit = octet >> (i-1) & 1;
 		// same form as putnbr (nb + '0');
 		bit_to_print = bit + '0';
 		write(1, &bit_to_print, 1);
@@ -20,9 +20,10 @@ void print_bits(unsigned char octet)
 }
 
 /*
-	* :: explanation from v2 but can be usefull also here :: 
-	Explanation of bit = (octet >> i & 1) + '0';
-	these part (octet >> i & 1) is to get it each step of the loop is 1 or 0.
+	* :: explanation from v2 but can be usefull also here ::
+	Explanation of bit = octet >> (i-1) & 1; + '0';
+	these part bit = octet >> (i-1) & 1; is to get it each step of the loop is 1 or 0.
+	 - REMINDER :: (i-1) is because the char is going form 0-7 and the loop will go from 1-8 if we don't do these step we will miss one bit in the output. 
 
 	octet >> i means: 
 		if we want the 5 number of the byte 
