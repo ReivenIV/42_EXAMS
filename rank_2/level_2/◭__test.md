@@ -5,6 +5,20 @@
 ### Bitwise Operators
 C provides several operators to manipulate bits directly:
 
+1. **AND (&)**
+2. **OR (|):**
+3. **XOR (^):**
+4. **NOT (~):**
+5. **Left Shift (<<):**
+6. **Right Shift (>>):**
+
+| Bit 1 | Bit 2 | Opérateur « et » | Opérateur « ou inclusif » | Opérateur « ou exclusif » |
+|-------|-------|------------------|---------------------------|---------------------------|
+| 0     | 0     | 0                | 0                         | 0                         |
+| 1     | 0     | 0                | 1                         | 1                         |
+| 0     | 1     | 0                | 1                         | 1                         |
+| 1     | 1     | 1                | 1                         | 0                         |
+
 1. **AND (`&`)**: Compares each bit of two numbers and returns a new number. A bit is set to 1 only if both corresponding bits are 1.
    ```c
    int a = 5;  // 0101 in binary
