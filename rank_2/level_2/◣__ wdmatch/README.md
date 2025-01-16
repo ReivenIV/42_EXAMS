@@ -16,7 +16,6 @@ it simply displays a \n.
 If the number of arguments is not 2, the program displays a \n.
 
 Examples:
-
 $>./wdmatch "faya" "fgvvfdxcacpolhyghbreda" | cat -e
 faya$
 $>./wdmatch "faya" "fgvvfdxcacpolhyghbred" | cat -e
@@ -37,4 +36,19 @@ $
 
 # Personal notes: (non subjet part)
 # Explanation explanation with legos: 
+To understand the idea check union and inter explanations. These one has the same approach. 
 
+You have a list with a certain order and a bucket of legos. 
+If the the legos in the bucket are in the order asked in the list then print. 
+
+Some more examples 
+$>./wdmatch "faya" "aayyaaff" | cat -e
+$
+$>./wdmatch "faya" "fffyyaaa" | cat -e
+$
+$>./wdmatch "faya" "yyyaaafff" | cat -e
+$
+$>./wdmatch "faya" "fffaaayyyaaa" | cat -e
+faya$
+$>./wdmatch "faya" "fXXaXXyXXaXXa" | cat -e
+faya$
