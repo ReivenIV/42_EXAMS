@@ -5,14 +5,14 @@
 ### Bitwise Operators
 C provides several operators to manipulate bits directly:
 
-1. **AND (&)**
-2. **OR (|):**
+1. **AND (&)** : completed if 0:0=0 if 1:1=1
+2. **OR (|):** : needs only 1.  1:0 1:1 == 1
 3. **XOR (^):**
 4. **NOT (~):**
-5. **Left Shift (<<):**
+5. **Left Shift (<<):** a=0101 0101    a<<4= 
 6. **Right Shift (>>):**
 
-| Bit 1 | Bit 2 | & | operator 'OR' | ^ |
+| Bit 1 | Bit 2 | &                | operator 'OR'             | ^                         |
 |-------|-------|------------------|---------------------------|---------------------------|
 | 0     | 0     | 0                | 0                         | 0                         |
 | 1     | 0     | 0                | 1                         | 1                         |
@@ -49,14 +49,22 @@ int result = ~a;  // 1010 in binary (in 4-bit representation), which is -6 in de
 ```
 
 5. **Left Shift (<<):** Shifts all bits in a number to the left by a specified number of positions. New bits on the right are filled with 0s.
+	- Shifts all bits in a number to the left by a specified number of positions.
+	- New bits on the right are filled with 0s.
+	- **Each left shift by one position is equivalent to multiplying the number by 2.**
+
 ```c
-int a = 5;  // 0101 in binary
-int result = a << 1;  // 1010 in binary, which is 10 in decimal
+int a = 3;  // 00000011 in binary
+int result = a << 3;  // 00011000 in binary, which is 24 in decimal 3*2=6*2=12*2=> 24
 ```
 
 6. **Right Shift (>>):** Shifts all bits in a number to the right by a specified number of positions. New bits on the left depend on the sign of the number (0 for unsigned, sign bit for signed).
-```c
-int a = 5;  // 0101 in binary
-int result = a >> 1;  // 0010 in binary, which is 2 in decimal
-```
 
+	- Shifts all bits in a number to the right by a specified number of positions.
+	- For unsigned numbers, new bits on the left are filled with 0s.
+	- For signed numbers, new bits on the left are filled with the sign bit (arithmetic shift) to preserve the sign of the number.
+	- **Each right shift by one position is equivalent to dividing the number by 2 (and discarding the remainder).**
+```c
+int a = 1000;  // 1111101000 in binary
+int result = a >> 2;  // 0011111010 in binary, which is 250 in decimal
+```
