@@ -1,4 +1,12 @@
-### Bits and Bytes
+# Bits and Bytes
+
+In C, bits and bytes can be manipulated using various data types, but unsigned char is often used for bitwise operations for the following reasons:
+
+- **Size:** unsigned char is guaranteed to be 1 byte (8 bits) in size.
+- **Portability:** Using unsigned char ensures that the code is portable across different platforms.
+- **Range:** unsigned char ranges from 0 to 255, which is suitable for representing a byte without negative values.
+
+## Quick reminder: 
 - **Bit**: The smallest unit of data in a computer, represented as either 0 or 1.
 - **Byte**: A group of 8 bits. For example, `01010101` is one byte.
 
@@ -6,11 +14,11 @@
 C provides several operators to manipulate bits directly:
 
 1. **AND (&)** : completed if 0:0=0 if 1:1=1
-2. **OR (|):** : needs only 1.  1:0 1:1 == 1
+2. **OR (|):** : needs only 1.  1:0 0:1 1:1 == 1
 3. **XOR (^):**
 4. **NOT (~):**
-5. **Left Shift (<<):** a=0101 0101    a<<4= 
-6. **Right Shift (>>):**
+5. **Left Shift (<<):** a=1111-1111    a<<3= 1111-1000
+6. **Right Shift (>>):**b=1111-1111    b>>3= 0001-1111
 
 | Bit 1 | Bit 2 | &                | operator 'OR'             | ^                         |
 |-------|-------|------------------|---------------------------|---------------------------|
