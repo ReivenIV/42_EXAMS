@@ -12,7 +12,7 @@ C provides several operators to manipulate bits directly:
 5. **Left Shift (<<):**
 6. **Right Shift (>>):**
 
-| Bit 1 | Bit 2 | & | operator 'OR|' | ^ |
+| Bit 1 | Bit 2 | & | operator 'OR' | ^ |
 |-------|-------|------------------|---------------------------|---------------------------|
 | 0     | 0     | 0                | 0                         | 0                         |
 | 1     | 0     | 0                | 1                         | 1                         |
