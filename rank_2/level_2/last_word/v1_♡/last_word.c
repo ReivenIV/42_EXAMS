@@ -6,7 +6,7 @@
 /*   By: rita <rita@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 14:42:24 by rita              #+#    #+#             */
-/*   Updated: 2025/01/15 15:24:26 by rita             ###   ########.fr       */
+/*   Updated: 2025/01/16 20:24:16 by rita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,12 @@ void	print_last_word(char *str)
 	// in case str is empty or null we stop de function
 	if(!str || str[end] == '\0')
 		return ;
-		// we search for the end of str
-	while (str[end] != '\0')
+	// we search for the end of str. +1 is to avoid counting the '\0'
+	while (str[end+1] != '\0')
 		end++;
+	// If at the end of str are spaces or tabs we go till we found any other kind of simbol
+	while(end > 0 && (str[end] == ' ' || str[end] == '\t'))
+		end--;	
 	// We will search backwards from end. 
 	start = end;
 	// we search the beginning of the last word. 
@@ -32,8 +35,8 @@ void	print_last_word(char *str)
 	while(start > 0 && str[start-1] != ' ' && str[start-1] != '\t')
 		start--;
 		
-	//We print it baby !! 
-	while (start < end)
+	// We print it baby !! 
+	while (start <= end)
 	{
 		write(1, &str[start], 1);
 		start++;	
