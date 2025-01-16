@@ -13,12 +13,12 @@ In C, bits and bytes can be manipulated using various data types, but unsigned c
 ### Bitwise Operators
 C provides several operators to manipulate bits directly:
 
-1. **AND (&)** : completed if 0:0=0 if 1:1=1
-2. **OR (|):** : needs only 1.  1:0 0:1 1:1 == 1
+1. **AND (&)** : completed if   0:0=0  1:0=0  0:1=0  **1:1=1**
+2. **OR (|):** : needs only 1.  0:0=0  1:0=1  0:1=1  1:1=1
 3. **XOR (^):**
 4. **NOT (~):**
-5. **Left Shift (<<):** a=1111-1111    a<<3= 1111-1000
-6. **Right Shift (>>):**b=1111-1111    b>>3= 0001-1111
+5. **Left Shift (<<):** a=1111-1111    a<<3= 1111-1000 **x2**
+6. **Right Shift (>>):**b=1111-1111    b>>3= 0001-1111 **/2**
 
 | Bit 1 | Bit 2 | &                | operator 'OR'             | ^                         |
 |-------|-------|------------------|---------------------------|---------------------------|
