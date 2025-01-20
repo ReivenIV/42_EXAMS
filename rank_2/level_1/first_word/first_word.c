@@ -1,15 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   first_word.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: rita <rita@student.42.fr>                  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/19 15:36:27 by rita              #+#    #+#             */
-/*   Updated: 2024/12/19 15:50:11 by rita             ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
+// source unknown
 #include <unistd.h>
 
 /*
@@ -24,16 +13,15 @@ int main (int argc, char **argv)
     if (argc == 2)
     {
         // if there are spaces or tabs i++
-        while (argv[1][i] == 9 || argv[1][i] == 32)
+        while (argv[1][i] == '\t' || argv[1][i] == ' ')
             i++;
         // loop till the end of till an space or a tab    
-        while (argv[1][i] != '\0' && (argv[1][i] == 9 || argv[1][i] == 32))
+        while (argv[1][i] != '\0' && (argv[1][i] == '\t' || argv[1][i] == ' '))
         {
             // while looping print every caracter
             write(1, &argv[1][i], 1);
             i++;
         }
     }
-    // at the end of all the loops add a new line
     write(1, "\n", 1);
 }
