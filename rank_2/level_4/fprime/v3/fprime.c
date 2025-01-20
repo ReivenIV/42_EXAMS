@@ -1,16 +1,11 @@
 // source : https://github.com/ayoub0x1/C-Piscine-exam/blob/main/Level%2004/fprime/fprime.c
 
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   fprime.c                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
+
 /*   By: fwuensche <fwuensche@student.42.fr>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+
 /*   Created: 2019/03/04 15:47:01 by fwuensche         #+#    #+#             */
 /*   Updated: 2019/03/05 07:40:34 by fwuensche        ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include <stdlib.h>
 #include <stdio.h>
