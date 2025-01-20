@@ -37,7 +37,7 @@ $
 Largest positive integer that divides each of the given numbers without leaving a remainder.
 - REMINDER: you will need to use '%' and not '/' to solve these problem. 
 
-For example, to find the HCF of 18 and 24:
+For example, to find the pgcd of 18 and 24:
 ```
 The factors of 18 are 1,2,3,6,9,18
 The factors of 24 are 1,2,3,4,6,8,12,24

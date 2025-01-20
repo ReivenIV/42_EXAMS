@@ -38,3 +38,5 @@ Your function must be prototyped as follows:
 # Personal notes: (non subjet part)
 # The Lowest Common Multiple (LCM)
 Is the smallest positive integer that is divisible by each of two or more numbers.
+--> You need to find a number that the modulo of 'a' & 'b'is == 0;
+REMINDER : if (random_nb % a == 0 && random_nb % b == 0)
