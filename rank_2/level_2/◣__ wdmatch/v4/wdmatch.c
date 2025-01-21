@@ -1,10 +1,7 @@
 // source : https://searchcode.com/file/340560682/02/2-3-wdmatch/wdmatch.c/
 /*   By: angavrel <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/05 20:21:01 by angavrel          #+#    #+#             */
 /*   Updated: 2016/12/05 20:33:50 by angavrel         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 
 #include <unistd.h>
