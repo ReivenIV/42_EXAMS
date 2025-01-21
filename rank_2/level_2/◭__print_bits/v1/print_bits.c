@@ -10,10 +10,8 @@ void print_bits(unsigned char octet)
 	int i = 8;
 	while (i > 0)
 	{
-		// way to get eacht bit from the byte(8bits)
-		bit = octet >> (i-1) & 1;
-		// same form as putnbr (nb + '0');
-		bit_to_print = bit + '0';
+		bit = octet >> (i-1) & 1;			// way to get eacht bit from the byte(8bits)	
+		bit_to_print = bit + '0';			// same form as putnbr (nb + '0');
 		write(1, &bit_to_print, 1);
 		i--;
 	}

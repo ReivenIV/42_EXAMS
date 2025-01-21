@@ -13,7 +13,10 @@ void	ft_list_foreach(t_list *begin_list, void (*f)(void *))
     }
 }
 
-// :: test it dear :: 
+//   ---------------------
+//   ::  test it dear   :: 
+//   ---------------------
+
 // // #include <stdio.h>
 
 // // // random easy function you can do whatever you want :
