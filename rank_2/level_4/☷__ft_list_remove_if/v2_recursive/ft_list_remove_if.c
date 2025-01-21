@@ -10,11 +10,10 @@ void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 		return;
 
 	t_list *cur = *begin_list;
-
 	if (cmp(cur->data, data_ref) == 0)
 	{
 		*begin_list = cur->next;
-		free(cur);
+		free(cur);				// without free you will have leaks but it will work
 		ft_list_remove_if(begin_list, data_ref, cmp);
 	}
 	else // if there is a no else, you cant pass the Moulinette, tryed 2023.09.08
