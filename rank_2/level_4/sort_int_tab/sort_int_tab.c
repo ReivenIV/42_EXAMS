@@ -3,7 +3,7 @@ void	sort_int_tab(int *tab, unsigned int size)
 	unsigned int	i = 0;
 	int	temp;
 
-	while (i < (size - 1))
+	while (i < (size - 1)) // without the size-1 you will have an infinit loop. 
 	{
 		if (tab[i] > tab[i + 1])
 		{
@@ -18,8 +18,10 @@ void	sort_int_tab(int *tab, unsigned int size)
 }
 
 
-// functions to print / test the function
-// 		:: test it dear :: 
+//-------------------------------------------
+// 			:: test it dear !! ::
+//-------------------------------------------
+
 // // #include <stdio.h>
 // // void print_array(int *tab, unsigned int size) {
 // // 	for (unsigned int i = 0; i < size; i++) {
