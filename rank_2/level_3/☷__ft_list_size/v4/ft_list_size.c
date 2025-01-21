@@ -5,7 +5,7 @@
 
 int ft_list_size(t_list *begin_list) {
     int count = 0;
-    for (t_list *current = begin_list; current != NULL; current = current->next) {
+    for (t_list *current = begin_list; current != NULL; current = current->next) {  // not sure that we can do for loop in the exam.
         count++;
     }
     return count;

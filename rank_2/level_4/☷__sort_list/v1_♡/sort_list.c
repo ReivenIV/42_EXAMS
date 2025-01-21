@@ -15,10 +15,10 @@ t_list *sort_list(t_list* lst, int (*cmp)(int, int)) {
             temp_swap = lst->data;
             lst->data = lst->next->data;
             lst->next->data = temp_swap;
-            lst = start;                            // restart to the first node.
+            lst = start;                             // restart to the first node.
         }
-        else                                        // you need the else otherwise is not going to restart properly. 
-		    lst = lst->next;                        // check for the next node.
+        else                                         // you need the else otherwise is not going to restart properly. 
+		    lst = lst->next;                         // check for the next node.
     }
     return (start);
 }

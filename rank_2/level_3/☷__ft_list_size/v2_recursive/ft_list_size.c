@@ -21,6 +21,8 @@ int	ft_list_size(t_list *begin_list)
 */
 
 //-------------------------------------------
+// 			:: test it dear !! ::
+//-------------------------------------------
 
 // // #include <stdio.h>
 // // #include <stdlib.h>
