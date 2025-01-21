@@ -6,6 +6,8 @@ $> ./first_word "FOR PONY" | cat -e
 FOR$
 */
 
+// REMINDER : check last_word is almost the same (level_3/last_word)
+
 int main (int argc, char **argv)
 {
     int i;
