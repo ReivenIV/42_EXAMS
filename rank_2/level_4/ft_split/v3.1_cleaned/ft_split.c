@@ -16,7 +16,7 @@ char		**ft_split(char *str)
 	while (str[i])
 	{
 		j = 0;
-		if (!(dest[k] = (char *)malloc(sizeof(char) * 5000)))
+		if (!(dest[k] = (char *)malloc(sizeof(char) * 4096)))
 			return (NULL);
 		while (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && str[i])
 		{

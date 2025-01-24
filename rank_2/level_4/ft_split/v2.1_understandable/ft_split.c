@@ -32,12 +32,12 @@ char	**ft_split(char *str)
 		while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
 			i++;
 		if (str[i])
-			word_count++; // <-- the main objective. 
+			word_count++; 																// <-- the main objective of these part.
 		while (str[i] && (str[i] != ' ' && str[i] != '\t' && str[i] != '\n'))
 			i++;
 	}
 	
-	dest = (char **)malloc(sizeof(char *) * (word_count + 1));
+	dest = malloc((word_count + 1) * sizeof(char *));									// <-- 
 	i = 0;
 	
 	while (str[i])
@@ -50,8 +50,9 @@ char	**ft_split(char *str)
 		end = i;
 		if (end > start)
 		{
-			dest[dest_index] = (char *)malloc(sizeof(char) * ((end - start) + 1));
-			ft_strncpy(dest[dest_index++], &str[start], end - start);
+			dest[dest_index] = malloc(sizeof(char) * ((end - start) + 1));
+			ft_strncpy(dest[dest_index], &str[start], end - start);
+			dest_index++;
 		}
 	}
 	dest[dest_index] = NULL;
