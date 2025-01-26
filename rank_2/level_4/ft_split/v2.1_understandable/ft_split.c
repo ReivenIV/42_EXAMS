@@ -32,30 +32,30 @@ char	**ft_split(char *str)
 		while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
 			i++;
 		if (str[i])
-			word_count++; 																// <-- the main objective of these part.
+			word_count++; 																// <-- count amount of words in the string
 		while (str[i] && (str[i] != ' ' && str[i] != '\t' && str[i] != '\n'))
 			i++;
 	}
 	
-	dest = malloc((word_count + 1) * sizeof(char *));									// <-- 
-	i = 0;
+	dest = malloc((word_count + 1) * sizeof(char *));									// <-- array string malloc +1 dont forget the the null string at the end. 
+	i = 0;																				// reset of i
 	
-	while (str[i])
+	while (str[i] != '\0')
 	{
-		while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
+		while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))			// search begining of the word
 			i++;
-		start = i;
-		while (str[i] && (str[i] != ' ' && str[i] != '\t' && str[i] != '\n'))
+		start = i;	
+		while (str[i] && (str[i] != ' ' && str[i] != '\t' && str[i] != '\n'))			// search end of the word
 			i++;
 		end = i;
 		if (end > start)
 		{
-			dest[dest_index] = malloc(sizeof(char) * ((end - start) + 1));
-			ft_strncpy(dest[dest_index], &str[start], end - start);
+			dest[dest_index] = malloc(sizeof(char) * ((end - start) + 1));				// create each string
+			ft_strncpy(dest[dest_index], &str[start], end - start);						// put data in empty string
 			dest_index++;
 		}
 	}
-	dest[dest_index] = NULL;
+	dest[dest_index] = NULL;															// add a NULL string to the end of the array of strings 
 	return (dest);
 }
 
