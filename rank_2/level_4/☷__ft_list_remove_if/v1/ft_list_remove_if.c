@@ -4,7 +4,7 @@
 
 void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 {
-	if (*begin_list == NULL || begin_list == NULL)  // with these if we stop the recursive otherwise we will have an infinit loop. 
+	if (*begin_list == NULL || begin_list == NULL)  							// with these "if" we stop the recursive otherwise we will have an infinit loop. 
 		return ;
 
 	t_list *curent_node = *begin_list;
@@ -13,7 +13,7 @@ void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 	if (cmp(curent_node->data, data_ref) == 0)
 	{
 		*begin_list = curent_node->next;
-		free(curent_node);			 // without free you will have leaks
+		free(curent_node);			 											// without free you will have leaks
 		ft_list_remove_if(begin_list, data_ref, cmp);
 	}
 	else
