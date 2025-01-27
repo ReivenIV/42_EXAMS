@@ -4,33 +4,34 @@
 
 char		**ft_split(char *str)
 {
-	int		i = 0;
-	int		j = 0;
-	int		k = 0;
+	int		i = 0;																// index of source string
+	int		j = 0;																// index of new each string in the array of strings
+	int		dest_index = 0;														// dest/vector index
 	char	**dest;
 
-	if (!(dest = (char **)malloc(sizeof(char *) * 256)))
+	if (!(dest = (char **)malloc(sizeof(char *) * 256)))						// creates 256 vectors in dest**
 		return (NULL);
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
-		i += 1;
-	while (str[i])
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')					//* search for the first caracter
+		i++;
+	while (str[i] != '\0')
 	{
 		j = 0;
-		if (!(dest[k] = (char *)malloc(sizeof(char) * 4096)))
+		dest[dest_index] = (char *)malloc(sizeof(char) * 4096);					// creates empty string of size 4096
+		if (dest[dest_index] == NULL)
 			return (NULL);
-		while (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && str[i])
+		while (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && str[i])		//* loop only on caracters
 		{
-			dest[k][j] = str[i];
+			dest[dest_index][j] = str[i];										// fill the empty string
 			j++;
 			i++;
 		}
-		while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
+		dest[dest_index][j] = '\0';												// add NULL / '\0' at the end of the string
+		while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')				//* search for the next word
 			i++;
-		dest[k][j] = '\0';
-		k++;
+		dest_index++;															// next vector
 	}
-	dest[k] = NULL;
-	return (dest);
+	dest[dest_index] = NULL;													// at the end the last vector is null
+	return (dest);																// return dest 
 }
 
 //   ---------------------
