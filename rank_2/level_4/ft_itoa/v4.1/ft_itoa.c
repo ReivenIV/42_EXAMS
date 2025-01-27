@@ -1,28 +1,22 @@
-/*   By: enzgonca <enzgonca@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 16:13:51 by enzgonca          #+#    #+#             */
-/*   Updated: 2024/11/12 12:42:19 by enzgonca         ###   ########.fr       */
+// ref v4
 
 #include <stdio.h>
 #include <stdlib.h>
 
-static int	ft_intlen(int n)
-{
-	int	i;
-	i = 0;
-	if (n == 0)
-		return (1);
-	if (n < 0)
+static int	ft_intlen(int nb)
+{ 
+	int count = 0;
+    if (nb >= 0 && nb <= 9)
+        return (1);
+    if (nb < 0)
 	{
-		i++;
+		count++;
+		return (count = 1 + ft_intlen(-nb / 10 * -1));
 	}
-	while (n != 0)
-	{
-		n /= 10;
-		i++;
-	}
-	return (i);
+    return (count = 1 + ft_intlen(nb / 10));
 }
+
+
 char	*ft_itoa(int n)
 {
 	char	*dest;
@@ -50,10 +44,6 @@ char	*ft_itoa(int n)
 	return (dest);
 }
 
-//   ---------------------
-//   ::  test it dear   :: 
-//   ---------------------
-
 int main()
 {
     int test_values[] = {0, -123, 456, -7890, 2147483647, -2147483648};
@@ -64,8 +54,26 @@ int main()
         int value = test_values[i];
         char *result = ft_itoa(value);
         printf("ft_itoa(%d) = %s\n", value, result);
-        free(result);
+       // free(result);
     }
 
     return 0;
 }
+
+
+//* maint to test ft_intlen
+// // int main()
+// // {
+// //     int test_values[] = {0, -123, 456, -7890, 2147483647, -2147483648};
+// //     int num_tests = sizeof(test_values) / sizeof(test_values[0]);
+
+// //     for (int i = 0; i < num_tests; i++)
+// //     {
+// //         int value = test_values[i];
+// //         char *result = ft_itoa(value);
+// //         printf("ft_itoa(%d) = %s\n", value, result);
+// //         free(result);
+// //     }
+
+// //     return 0;
+// // }
