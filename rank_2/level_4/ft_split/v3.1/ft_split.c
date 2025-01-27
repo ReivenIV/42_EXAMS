@@ -4,35 +4,35 @@
 
 char		**ft_split(char *str)
 {
-	int		i = 0;																// index of source string
-	int		j = 0;																// index of new each string in the array of strings
-	int		dest_index = 0;														// dest/vector index
+	int		i = 0;                                                              // index of source string
+	int		j = 0;                                                              // index of new each string in the array of strings
+	int		dest_index = 0;                                                     // dest/vector index
 	char	**dest;
 
-	dest = malloc(sizeof(char *) * 256);										// creates 256 vectors in dest**
+	dest = malloc(sizeof(char *) * 256);                                        // creates 256 vectors in dest**
 	if (dest == NULL)					
 		return (NULL);
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')					//* search for the first caracter
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')                   //* search for the first caracter
 		i++;
 	while (str[i] != '\0')
 	{
 		j = 0;
-		dest[dest_index] = malloc(sizeof(char) * 4096);							// creates empty string of size 4096
+		dest[dest_index] = malloc(sizeof(char) * 4096);                         // creates empty string of size 4096
 		if (dest[dest_index] == NULL)
 			return (NULL);
-		while (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && str[i])		//* loop only on caracters
+		while (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && str[i])	    //* loop only on caracters
 		{
-			dest[dest_index][j] = str[i];										// fill the empty string
+			dest[dest_index][j] = str[i];                                       // fill the empty string
 			j++;
 			i++;
 		}
 		dest[dest_index][j] = '\0';												// add NULL / '\0' at the end of the string
-		while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')				//* search for the next word
+		while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')               //* search for the next word
 			i++;
-		dest_index++;															// next vector
+		dest_index++;                                                           // next vector
 	}
-	dest[dest_index] = NULL;													// at the end the last vector is null
-	return (dest);																// return dest 
+	dest[dest_index] = NULL;                                                    // at the end the last vector is null
+	return (dest);                                                              // return dest 
 }
 
 //   ---------------------
