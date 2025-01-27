@@ -20,13 +20,13 @@ char		**ft_split(char *str)
 		dest[dest_index] = malloc(sizeof(char) * 4096);                         // creates empty string of size 4096
 		if (dest[dest_index] == NULL)
 			return (NULL);
-		while (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && str[i])	    //* loop only on caracters
+		while (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && str[i])     //* loop only on caracters
 		{
 			dest[dest_index][j] = str[i];                                       // fill the empty string
 			j++;
 			i++;
 		}
-		dest[dest_index][j] = '\0';												// add NULL / '\0' at the end of the string
+		dest[dest_index][j] = '\0';                                             // add NULL / '\0' at the end of the string
 		while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')               //* search for the next word
 			i++;
 		dest_index++;                                                           // next vector
