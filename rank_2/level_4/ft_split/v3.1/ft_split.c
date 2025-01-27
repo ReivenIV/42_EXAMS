@@ -9,14 +9,15 @@ char		**ft_split(char *str)
 	int		dest_index = 0;														// dest/vector index
 	char	**dest;
 
-	if (!(dest = (char **)malloc(sizeof(char *) * 256)))						// creates 256 vectors in dest**
+	dest = malloc(sizeof(char *) * 256);										// creates 256 vectors in dest**
+	if (dest == NULL)					
 		return (NULL);
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')					//* search for the first caracter
 		i++;
 	while (str[i] != '\0')
 	{
 		j = 0;
-		dest[dest_index] = (char *)malloc(sizeof(char) * 4096);					// creates empty string of size 4096
+		dest[dest_index] = malloc(sizeof(char) * 4096);							// creates empty string of size 4096
 		if (dest[dest_index] == NULL)
 			return (NULL);
 		while (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && str[i])		//* loop only on caracters
