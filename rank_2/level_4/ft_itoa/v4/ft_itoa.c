@@ -8,14 +8,11 @@
 
 static int	ft_intlen(int n)
 {
-	int	i;
-	i = 0;
+	int	i = 0;
 	if (n == 0)
 		return (1);
 	if (n < 0)
-	{
 		i++;
-	}
 	while (n != 0)
 	{
 		n /= 10;
