@@ -51,18 +51,18 @@ char	*ft_itoa(int n)
 //   ::  test it dear   :: 
 //   ---------------------
 
-int main()
-{
-    int test_values[] = {0, -123, 456, -7890, 2147483647, -2147483648};
-    int num_tests = sizeof(test_values) / sizeof(test_values[0]);
+// // int main()
+// // {
+// //     int test_values[] = {0, -123, 456, -7890, 2147483647, -2147483648};
+// //     int num_tests = sizeof(test_values) / sizeof(test_values[0]);
 
-    for (int i = 0; i < num_tests; i++)
-    {
-        int value = test_values[i];
-        char *result = ft_itoa(value);
-        printf("ft_itoa(%d) = %s\n", value, result);
-        free(result);
-    }
+// //     for (int i = 0; i < num_tests; i++)
+// //     {
+// //         int value = test_values[i];
+// //         char *result = ft_itoa(value);
+// //         printf("ft_itoa(%d) = %s\n", value, result);
+// //         free(result);
+// //     }
 
-    return 0;
-}
+// //     return 0;
+// // }
