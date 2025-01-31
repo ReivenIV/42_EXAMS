@@ -12,14 +12,14 @@ void	sort_int_tab(int *tab, unsigned int size)
 			tab[i + 1] = temp;
 			i = 0;
 		}
-		else
+		else 
 			i++;
 	}
 }
 
 
 //-------------------------------------------
-// 			:: test it dear !! ::
+//*        :: !! test it dear !! ::
 //-------------------------------------------
 
 // // #include <stdio.h>
@@ -41,7 +41,7 @@ void	sort_int_tab(int *tab, unsigned int size)
 // // 	printf("\n");
 
 
-// // 	int tab2[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+// // 	int tab2[] = {10, 9, 8, 7, 6, 500, 4, 3, 2, 1};
 // // 	unsigned int size2 = 10;
 // // 	printf("Original array: ");
 // // 	print_array(tab2, size2);
@@ -50,7 +50,7 @@ void	sort_int_tab(int *tab, unsigned int size)
 // // 	print_array(tab2, size2);
 // // 	printf("\n");
 
-// // 	int tab3[] = {1, 2, 3, 4, 5};
+// // 	int tab3[] = {1, 2, 38, 4, 5};
 // // 	unsigned int size3 = 5;
 // // 	printf("Original array: ");
 // // 	print_array(tab3, size3);
