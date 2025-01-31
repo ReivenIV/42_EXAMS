@@ -24,10 +24,14 @@ void ft_pgcd(int n1, int n2)
 	printf("%d", pgcd);
 }
 
-int	main(int ac, char **av)
-{
-	if (ac == 3)
-		ft_pgcd(atoi(av[1]), atoi(av[2]));		
-	printf("\n");
-	return(0);
-}
+//   ---------------------
+//   ::  test it dear   :: 
+//   ---------------------
+
+// int	main(int ac, char **av)
+// {
+// 	if (ac == 3)
+// 		ft_pgcd(atoi(av[1]), atoi(av[2]));		
+// 	printf("\n");
+// 	return(0);
+// }

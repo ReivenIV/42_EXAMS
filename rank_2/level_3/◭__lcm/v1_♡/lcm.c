@@ -1,27 +1,28 @@
   // reference : v2
-  unsigned int	lcm(unsigned int a, unsigned int b)
+unsigned int	lcm(unsigned int a, unsigned int b)
+{
+  unsigned int random_nb;
+  if (a == 0 || b == 0)
+    return (0);
+  
+  // we take the bigger number from a/b to start our test to find the lcm.
+  if (a > b)
+    random_nb = a;
+  else
+    random_nb = b;
+  
+  // We do an infinit loop till the if is true to stop the function.
+  while (1)
   {
-
-    unsigned int random_nb;
-    if (a == 0 || b == 0)
-      return (0);
-    
-    // we take the bigger number from a/b to start our test to find the lcm.
-    if (a > b)
-      random_nb = a;
-    else
-      random_nb = b;
-    
-    // We do an infinit loop till the if is true to stop the function.
-    while (1)
-    {
-      if (random_nb % a == 0 && random_nb % b == 0)
-        return (random_nb);
-      random_nb++;
-    }
+    if (random_nb % a == 0 && random_nb % b == 0)
+      return (random_nb);
+    random_nb++;
   }
+}
 
-// :: Test it darling ::
+//   ---------------------
+//   ::  test it dear   :: 
+//   ---------------------
 // //   #include <stdio.h>
 // // // Function prototype
 // // unsigned int lcm(unsigned int a, unsigned int b);
