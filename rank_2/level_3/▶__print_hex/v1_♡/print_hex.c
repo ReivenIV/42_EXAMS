@@ -6,7 +6,7 @@
 /*   By: rita <rita@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:50:47 by rita              #+#    #+#             */
-/*   Updated: 2025/01/16 20:28:59 by rita             ###   ########.fr       */
+/*   Updated: 2025/01/31 14:32:45 by rita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,10 @@
 
 int	ft_atoi(char *str)
 {
-	int i;
-	int power;
-	int res;
+	int power = 1;
+	int i = 0;
+	int res = 0;
 
-	power = 1;
-	i = 0;
-	res = 0;
 	if (str[i] == '-')
 	{
 		power = power * -1;
@@ -48,7 +45,7 @@ void print_hex(int n)
 
 	if (n > 16)
 		print_hex(n / 16);
-	write(1, &digits[n % 16], 1);
+	write(1, &digits[n % 16], 1);					// [n % 16] :: way to know the position in digits
 }
 
 #include <stdio.h>
