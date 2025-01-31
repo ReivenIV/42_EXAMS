@@ -1,5 +1,14 @@
 #include <unistd.h>
 
+// source : unknown
+// --------------------------
+//*      sincere reminder
+// --------------------------
+/*
+	I found a bug in these version. 
+	i corrected in v4.1 please avoid 
+	using v4 for the exam.
+*/
 int	main(int ac, char **av)
 {
 	int	i = 0;
