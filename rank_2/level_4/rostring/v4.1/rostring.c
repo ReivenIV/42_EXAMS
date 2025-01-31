@@ -1,5 +1,8 @@
 #include <unistd.h>
 
+// source : no idea.
+// I think these one has a mistake Test it.
+
 int	main(int ac, char **av)
 {
     int	i = 0;
@@ -11,8 +14,8 @@ int	main(int ac, char **av)
     {	
         while (av[1][i] == ' ' || av[1][i] == '\t')
             i++;
-        start = i;
-        while (av[1][i] != ' ' && av[1][i] != '\t' && av[1][i])												// first word founded
+        start = i;                                                                                          // first char of first word founded
+        while (av[1][i] != ' ' && av[1][i] != '\t' && av[1][i])
             i++;
         end = i;
         while (av[1][i] == ' ' || av[1][i] == '\t')
