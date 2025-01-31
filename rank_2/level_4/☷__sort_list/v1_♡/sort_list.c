@@ -8,7 +8,7 @@ t_list *sort_list(t_list* lst, int (*cmp)(int, int)) {
 
     start = lst;
 
-    while (lst && lst->next)
+    while (lst && lst->next)                         // reminder : If you not check if the nest exist you will "segment fault"
     {
         if ((*cmp)(lst->data, lst->next->data) == 0) // check the subjet 
 	    {
