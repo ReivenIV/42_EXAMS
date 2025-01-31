@@ -39,7 +39,7 @@ int ascending(int a, int b)
 ---------------------------------
 
 # Personal notes: (non subjet part)
-these is the unique exercice where the subjet is not giving you will need to remember to do one. 
+in case you don't remember to test your code you will need a struct : 
 
 ```
 typedef struct	   s_list
