@@ -61,16 +61,12 @@ t_list *sort_list(t_list* lst, int (*cmp)(int, int)) {
 // //     lst->next->next->next = new_node(2);
 // //     lst->next->next->next->next = new_node(4);
 // //     lst->next->next->next->next->next = new_node(5);
-
 // //     printf("Original list: ");
 // //     print_list(lst);
-
 // //     // Sort the list
 // //     lst = sort_list(lst, ascending);
-
 // //     printf("Sorted list: ");
 // //     print_list(lst);
-
 // //     // Free the list
 // //     t_list *tmp;
 // //     while (lst != NULL) {
