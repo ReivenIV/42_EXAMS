@@ -7,12 +7,14 @@ void print_bits(unsigned char octet)
 	unsigned char 	bit;
 
 	int i = 8;
-	while (i--)
+	while (i > 0)
 	{
+		i--;									// needs to be at first positions otherwise doesn't work
 		bit = (octet >> i & 1) + '0';
 		write(1, &bit, 1);
 	}
 }
+
 
 /*
 	*  :: Check v1 it can be more clear to understand :: 
@@ -28,19 +30,22 @@ void print_bits(unsigned char octet)
 			- 1 + '0' = '1' 
 */
 
-// ::Test me baby:: 
-// int main() {
-//     unsigned char test_value = 0; // min 0000-0000
-//     print_bits(test_value);
-//     write(1, "\n", 1);
+//   ---------------------
+//   ::  test it dear   :: 
+//   ---------------------
+
+// // int main() {
+// //     unsigned char test_value = 0; // min 0000-0000
+// //     print_bits(test_value);
+// //     write(1, "\n", 1);
 
 
-//     test_value = 255; // max 1111-1111
-//     print_bits(test_value);
-//     write(1, "\n", 1);
+// //     test_value = 255; // max 1111-1111
+// //     print_bits(test_value);
+// //     write(1, "\n", 1);
 
-//     test_value = 170; // 1010-1010
-//     print_bits(test_value);
-//     write(1, "\n", 1);
-//     return 0;
-// }
+// //     test_value = 170; // 1010-1010
+// //     print_bits(test_value);
+// //     write(1, "\n", 1);
+// //     return 0;
+// // }
